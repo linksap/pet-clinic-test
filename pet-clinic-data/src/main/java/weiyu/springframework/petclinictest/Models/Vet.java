@@ -1,4 +1,4 @@
 package weiyu.springframework.petclinictest.Models;
 
-public class Person {
+public class Vet extends Person {
 }
