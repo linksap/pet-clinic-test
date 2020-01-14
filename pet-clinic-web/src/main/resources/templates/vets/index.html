@@ -4,7 +4,20 @@
     <meta charset="UTF-8">
     <title>List of Vet</title>
 </head>
-<body>
-    <h1 th:text = "Lists">List of Vet</h1>
-</body>
+<table>
+    <thead>
+    <tr>
+        <th>Id</th>
+        <th>First Name</th>
+        <th>Last Name</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr th:each="vets:${vets}">
+        <td th:text="${vets.id}"></td>
+        <td th:text="${vets.firstName}"></td>
+        <td th:text="${vets.LastName}"></td>
+    </tr>
+    </tbody>
+</table>
 </html>

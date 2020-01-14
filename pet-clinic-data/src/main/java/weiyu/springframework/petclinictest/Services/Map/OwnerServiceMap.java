@@ -1,12 +1,13 @@
 package weiyu.springframework.petclinictest.Services.Map;
 
 import com.sun.xml.bind.v2.model.core.ID;
+import org.springframework.stereotype.Service;
 import weiyu.springframework.petclinictest.Models.Owner;
 import weiyu.springframework.petclinictest.Services.CrudService;
 import weiyu.springframework.petclinictest.Services.OwnerService;
 
 import java.util.Set;
-
+@Service
 public class OwnerServiceMap extends AbstractMapService <Owner ,Long> implements OwnerService {
     @Override
     public Set<Owner> findAll() {
@@ -25,7 +26,7 @@ public class OwnerServiceMap extends AbstractMapService <Owner ,Long> implements
 
     @Override
     public Owner save(Owner owner) {
-        return  super.save(owner.getId(),owner);
+        return  super.save(owner);
     }
 
     @Override

@@ -1,10 +1,11 @@
 package weiyu.springframework.petclinictest.Services.Map;
 
+import org.springframework.stereotype.Service;
 import weiyu.springframework.petclinictest.Models.Vet;
 import weiyu.springframework.petclinictest.Services.VetService;
 
 import java.util.Set;
-
+@Service
 public class VetServiceMap extends AbstractMapService<Vet,Long> implements VetService {
     @Override
     public Set<Vet> findAll() {
@@ -18,12 +19,12 @@ public class VetServiceMap extends AbstractMapService<Vet,Long> implements VetSe
 
     @Override
     public Vet save(Vet vet) {
-        return save(vet.getId(),vet);
+        return super.save(vet);
     }
 
     @Override
     public void delete(Vet vet) {
-        delete(vet);
+        super.delete(vet);
     }
 
     @Override
