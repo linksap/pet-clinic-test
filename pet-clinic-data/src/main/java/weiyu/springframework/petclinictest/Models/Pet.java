@@ -3,9 +3,13 @@ package weiyu.springframework.petclinictest.Models;
 import java.time.LocalDate;
 
 public class Pet extends BaseEntity {
+    private String name;
+
+
+
     private Owner owner;
     private PetType petType;
-    private LocalDate localDate;
+    private LocalDate birthday;
 
     public Owner getOwner() {
         return owner;
@@ -23,11 +27,18 @@ public class Pet extends BaseEntity {
         this.petType = petType;
     }
 
-    public LocalDate getLocalDate() {
-        return localDate;
+    public LocalDate getBirthday() {
+        return birthday;
     }
 
-    public void setLocalDate(LocalDate localDate) {
-        this.localDate = localDate;
+    public void setBirthday(LocalDate birthday) {
+        this.birthday = birthday;
+    }
+    public String getName() {
+        return name;
+    }
+
+    public void setName(String name) {
+        this.name = name;
     }
 }
