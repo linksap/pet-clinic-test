@@ -2,12 +2,14 @@ package weiyu.springframework.petclinictest.Services.Map;
 
 import com.sun.xml.bind.v2.model.core.ID;
 import net.bytebuddy.implementation.bind.annotation.Super;
+import org.springframework.context.annotation.Profile;
 import org.springframework.stereotype.Service;
 import weiyu.springframework.petclinictest.Models.PetType;
 import weiyu.springframework.petclinictest.Services.PetTypeService;
 
 import java.util.Set;
 @Service
+@Profile("Default")
 public class PetTypeMapService extends AbstractMapService <PetType, Long> implements PetTypeService {
 
     @Override

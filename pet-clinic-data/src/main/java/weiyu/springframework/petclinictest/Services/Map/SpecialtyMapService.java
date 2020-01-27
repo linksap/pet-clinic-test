@@ -1,11 +1,13 @@
 package weiyu.springframework.petclinictest.Services.Map;
 
+import org.springframework.context.annotation.Profile;
 import org.springframework.stereotype.Service;
 import weiyu.springframework.petclinictest.Models.Speciality;
 import weiyu.springframework.petclinictest.Services.SpecialtyService;
 
 import java.util.Set;
 @Service
+@Profile("Default")
 public class SpecialtyMapService extends AbstractMapService <Speciality, Long> implements SpecialtyService {
     @Override
     public Set<Speciality> findAll() {

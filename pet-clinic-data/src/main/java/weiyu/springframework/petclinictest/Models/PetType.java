@@ -1,8 +1,14 @@
 package weiyu.springframework.petclinictest.Models;
 
+import javax.persistence.Column;
+import javax.persistence.Entity;
+import javax.persistence.Table;
+
+@Entity
+@Table(name = "types")
 public class PetType extends BaseEntity {
+    @Column(name="type")
     private String type;
-    private int test;
 
     public String getType() {
         return type;
