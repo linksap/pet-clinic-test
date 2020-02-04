@@ -17,7 +17,7 @@ class OwnerServiceMapTest {
         ownerServiceMap = new OwnerServiceMap(new PetTypeMapService(), new PetServiceMap());
         Owner owner = new Owner();
         owner.setId(id);
-        owner.setLastName(lastName);
+        owner.setLastName("WEI");
         ownerServiceMap.save(owner);
     }
 
